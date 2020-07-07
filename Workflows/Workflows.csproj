@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76FDF067-875A-4C46-8B25-7098165796D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OilDigital.Workflows</RootNamespace>
+    <AssemblyName>OilDigital.Workflows</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/OilDigital.Workflows/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OilDigital.Workflows.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\OilDigital.Workflows.XML</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity.cs" />
+    <Compile Include="ActivityExecutionResult.cs" />
+    <Compile Include="ApprovalAgent.cs" />
+    <Compile Include="ApprovalAssignment.cs" />
+    <Compile Include="ApprovalComment.cs" />
+    <Compile Include="ApprovalConfig.cs" />
+    <Compile Include="ApprovalEvent.cs" />
+    <Compile Include="ApprovalProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApprovalRecord.cs" />
+    <Compile Include="ApprovalRole.cs" />
+    <Compile Include="ApprovalService.cs" />
+    <Compile Include="ApprovalServiceHelper.cs" />
+    <Compile Include="ApprovalSolution.cs" />
+    <Compile Include="ApprovalState.cs" />
+    <Compile Include="CNPCApprovalProcess.cs" />
+    <Compile Include="ConfigurationHelper.cs" />
+    <Compile Include="IApprovalObjectService.cs" />
+    <Compile Include="IApprovalProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ICanBeApproval.cs" />
+    <Compile Include="IInstanceDistiller.cs" />
+    <Compile Include="IInstanceFilter.cs" />
+    <Compile Include="InstanceCollection.cs" />
+    <Compile Include="ITaskActionProcessor.cs" />
+    <Compile Include="ITaskItemDistiller.cs" />
+    <Compile Include="ITaskItemPropertyDistiller.cs" />
+    <Compile Include="IWorkflowPersistService.cs" />
+    <Compile Include="TaskDistiller.cs" />
+    <Compile Include="TaskItemProcessor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TaskListCollection.cs" />
+    <Compile Include="TasklistDistiller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TaskListToTableRender.cs" />
+    <Compile Include="ITableRender.cs" />
+    <Compile Include="ProgressRender.cs" />
+    <Compile Include="DrillApprovaInfo.cs" />
+    <Compile Include="DrillApprovalRecord.cs" />
+    <Compile Include="DrillApprovalSolution.cs" />
+    <Compile Include="EaAuditLog.cs" />
+    <Compile Include="EventRole.cs" />
+    <Compile Include="FilterByApprovalRole.cs" />
+    <Compile Include="HtmlTaskRender.cs" />
+    <Compile Include="HttpUserIdentity.cs" />
+    <Compile Include="IApprovalGroupRelative.cs" />
+    <Compile Include="IApprovalRules.cs" />
+    <Compile Include="IApprovalSaveService.cs" />
+    <Compile Include="IBranchAction.cs" />
+    <Compile Include="IdentityService.cs" />
+    <Compile Include="IFilter.cs" />
+    <Compile Include="InstanceEventArg.cs" />
+    <Compile Include="ITaskRender.cs" />
+    <Compile Include="ITransactionService.cs" />
+    <Compile Include="IUserIdentity.cs" />
+    <Compile Include="IUserInRole.cs" />
+    <Compile Include="IWorkflowSecurityService.cs" />
+    <Compile Include="KeepMineFilter.cs" />
+    <Compile Include="TaskList.cs" />
+    <Compile Include="TaskListRendingOption.cs" />
+    <Compile Include="TaskService.cs" />
+    <Compile Include="WorkflowConfig.cs" />
+    <Compile Include="WorkflowEventArgs.cs" />
+    <Compile Include="WorkflowExecuteExeception.cs" />
+    <Compile Include="WorkflowExecutionStatus.cs" />
+    <Compile Include="WorkflowInstance.cs" />
+    <Compile Include="WorkFlowDefine.cs" />
+    <Compile Include="IWorkFlowDefinePersistService.cs" />
+    <Compile Include="WorkflowRumtimeConfig.cs" />
+    <Compile Include="WorkflowRuntime.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachineWorkflow.cs" />
+    <Compile Include="StateMachineWorkflowInstance.cs" />
+    <Compile Include="WorkflowUtility.cs" />
+    <Compile Include="XmlWorkFlowDefinePersistService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 3.3</PostBuildEvent>
+  </PropertyGroup>
+</Project>

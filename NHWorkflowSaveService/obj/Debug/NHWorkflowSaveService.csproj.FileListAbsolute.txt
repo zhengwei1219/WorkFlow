@@ -1,0 +1,41 @@
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Debug\ResolveAssemblyReference.cache
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.XML
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\NHibernate.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Common.NhDAL.Core3.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\NHibernate.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\NHibernate.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Common.NhDAL.Core3.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.pdb
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.XML
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.dll
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.pdb
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.dll
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.dll
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.pdb
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.xml
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\NHibernate.pdb
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\NHibernate.xml
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Common.NhDAL.Core3.xml
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.pdb
+F:\WorkFlow\NHWorkflowSaveService\bin\Debug\Iesi.Collections.xml
+F:\WorkFlow\NHWorkflowSaveService\obj\Debug\NHWorkflowSaveService.csprojResolveAssemblyReference.cache
+F:\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.dll
+F:\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.pdb
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.XML
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.dll
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.DAO.pdb
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.dll
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.pdb
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\bin\Debug\OilDigital.Workflows.xml
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\obj\Debug\NHWorkflowSaveService.csprojResolveAssemblyReference.cache
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.dll
+G:\zhengwei\Project\WorkFlow\NHWorkflowSaveService\obj\Debug\OilDigital.Workflows.DAO.pdb

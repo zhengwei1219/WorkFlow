@@ -1,0 +1,17 @@
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Release\ResolveAssemblyReference.cache
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.DAO.XML
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.DAO.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.DAO.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\NHibernate.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Common.NhDAL.Core3.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\Iesi.Collections.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Workflows.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\NHibernate.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\NHibernate.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\OilDigital.Common.NhDAL.Core3.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\Iesi.Collections.pdb
+D:\My Proj\WorkFlow\NHWorkflowSaveService\bin\Release\Iesi.Collections.xml
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Release\OilDigital.Workflows.DAO.dll
+D:\My Proj\WorkFlow\NHWorkflowSaveService\obj\Release\OilDigital.Workflows.DAO.pdb

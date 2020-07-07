@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.ApprovalAgent, OilDigital.Workflows" table="WF_ApprovalAgent">
+		<id name="Id" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="SetUserId" column="SetUserId"/>
+		<property name="SetUserName" column="SetUserName"/>
+		<property name="ToUserId" column="ToUserId"/>
+		<property name="ToUserName" column="ToUserName"/>
+		<property name="BeginDate" column="BeginDate"/>
+		<property name="EndDate" column="EndDate"/>
+		<property name="SetDate" column="SetDate"/>
+		<property name="OperatorUser" column="OperatorUser" />
+		<property name="OperatorUserName" column="OperatorUserName" />
+		<property name="AdditionInfo" column="AdditionInfo"/>
+	</class>
+</hibernate-mapping>

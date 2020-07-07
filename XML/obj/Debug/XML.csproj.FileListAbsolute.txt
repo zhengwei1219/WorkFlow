@@ -1,0 +1,10 @@
+F:\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.XML
+F:\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.dll
+F:\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.pdb
+F:\WorkFlow\XML\obj\Debug\OilDigital.Workflows.XML.dll
+F:\WorkFlow\XML\obj\Debug\OilDigital.Workflows.XML.pdb
+G:\zhengwei\Project\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.XML
+G:\zhengwei\Project\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.dll
+G:\zhengwei\Project\WorkFlow\XML\bin\Debug\OilDigital.Workflows.XML.pdb
+G:\zhengwei\Project\WorkFlow\XML\obj\Debug\OilDigital.Workflows.XML.dll
+G:\zhengwei\Project\WorkFlow\XML\obj\Debug\OilDigital.Workflows.XML.pdb

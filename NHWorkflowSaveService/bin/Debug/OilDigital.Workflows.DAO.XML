@@ -1,0 +1,667 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OilDigital.Workflows.DAO</name>
+    </assembly>
+    <members>
+        <member name="T:OilDigital.Workflows.DAO.ApprovalCommentDao">
+            <summary>
+            基于Nhibernate定制意见的存取.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalCommentDao.GetUserCommentInfo(System.String,System.String)">
+            <summary>
+            Gets the user comment info.
+            </summary>
+            <param name="userId">The user id.</param>
+            <param name="approvalType">Type of the approval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalCommentDao.GetCommentInfo(System.String,System.String,System.String)">
+            <summary>
+            Gets the comment info.
+            </summary>
+            <param name="commentInfo">The comment info.</param>
+            <param name="userId">The user id.</param>
+            <param name="approvalType">Type of the approval.</param>
+            <returns></returns>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.EaAuditLogDao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.EaAuditLogDao.GetAuditLogByEaId(System.Int32)">
+            <summary>
+            Gets the audit log by ea id.
+            </summary>
+            <param name="eaId">The ea id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHActivityDao.GetNHActivitys(System.Int64[])">
+            <summary>
+            Gets the NH activitys.
+            </summary>
+            <param name="ids">The ids.</param>
+            <returns></returns>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.ApprovalAgentDao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalAgentDao.GetApprovalAgentByUserId(System.String)">
+            <summary>
+            Gets the approval agent by user id.
+            </summary>
+            <param name="setAgentUserId">The set agent user id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalAgentDao.GetValidAgentInfoByToUser(System.String)">
+            <summary>
+            Gets the valid agent info by to user.
+            </summary>
+            <param name="toUserId">To user id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalAgentDao.GetAgentInfoByToUser(System.String)">
+            <summary>
+            Gets the agent info by to user.
+            </summary>
+            <param name="toUserId">To user id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.ApprovalAgentDao.GetAllAgentInfo">
+            <summary>
+            Gets all agent info.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.NHApprovalService">
+            <summary>
+            基于Nhibernate的工作流存储服务
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.InsertSolution(OilDigital.Workflows.ApprovalSolution)">
+            <summary>
+            插入一条审批意见信息
+            </summary>
+            <param name="solution">意见</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.SaveSolution(OilDigital.Workflows.ApprovalSolution)">
+            <summary>
+            Saves the solution.
+            </summary>
+            <param name="solution">The solution.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetSolutionById(System.Int32)">
+            <summary>
+            Gets the solution.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetSolution(System.String,System.Int32)">
+            <summary>
+            获取某立项的审批信息
+            </summary>
+            <param name="workflowName">流程名称</param>
+            <param name="eaId">立项Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetSolution(System.Guid)">
+            <summary>
+            获取某工作流的审批信息
+            </summary>
+            <param name="instanceId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteSolution(System.Guid)">
+            <summary>
+            按实例Id删除审批意见记录
+            </summary>
+            <param name="instanceId">The instance id.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteSolutionById(System.Int32)">
+            <summary>
+            删除审批意见信息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecordDao">
+            <summary>
+            Gets the record DAO.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.InsertRecord(OilDigital.Workflows.ApprovalRecord)">
+            <summary>
+            插入审批记录
+            </summary>
+            <param name="record"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.SaveRecord(OilDigital.Workflows.ApprovalRecord)">
+            <summary>
+            Saves the record.
+            </summary>
+            <param name="record">The record.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecordById(System.Int32)">
+            <summary>
+            Gets the record.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecord(System.String,System.Int32)">
+            <summary>
+            按eaId获取审批记录
+            </summary>
+            <param name="workflowName"></param>
+            <param name="eaId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecord(System.Guid)">
+            <summary>
+            按实例Id获取审批记录
+            </summary>
+            <param name="instanceId">The instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecord(System.String,System.DateTime,System.DateTime,System.String)">
+            <summary>
+            获取某用户某段时间段的审批记录
+            </summary>
+            <param name="workflowName"></param>
+            <param name="startDate">起始时间</param>
+            <param name="endDate">终止时间</param>
+            <param name="userId">用户Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetRecord(System.String,System.DateTime,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            获取审批记录
+            </summary>
+            <param name="workflowName"></param>
+            <param name="startDate">起始时间</param>
+            <param name="endDate">截止时间</param>
+            <param name="userId">用户UserId(为空忽略改条件)</param>
+            <param name="unitCode">单位代码(为空忽略改条件)</param>
+            <param name="roleName">角色名称(为空忽略改条件)</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteRecordById(System.Int32)">
+            <summary>
+            Deletes the approval rercord.
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteRecord(System.Guid)">
+            <summary>
+            按实例Id删除审批记录
+            </summary>
+            <param name="instanceId">The instance id.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetUserCommentInfo(System.String,System.String)">
+            <summary>
+            获取用户在某个审批动作下的所有定制意见.
+            </summary>
+            <param name="userId">The user id.</param>
+            <param name="approvalType">Type of the approval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetCommentInfo(System.String,System.String,System.String)">
+            <summary>
+            查找相同的定制意见
+            </summary>
+            <param name="commentInfo">The comment info.</param>
+            <param name="userId">The user id.</param>
+            <param name="approvalType">Type of the approval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteCommentInfo(System.Int32)">
+            <summary>
+            删除定制意见
+            </summary>
+            <param name="commentId">定制意见Id</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.InsertCommentInfo(OilDigital.Workflows.ApprovalComment)">
+            <summary>
+            保存新增的定制意见
+            </summary>
+            <param name="comment">The comment.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.InsertAssignment(OilDigital.Workflows.ApprovalAssignment)">
+            <summary>
+            插入一条专办信息
+            </summary>
+            <param name="assignment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.SaveAssignment(OilDigital.Workflows.ApprovalAssignment)">
+            <summary>
+            Saves the assignment.
+            </summary>
+            <param name="assignment">The assignment.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentByUserId(System.String,System.String)">
+            <summary>
+            获取某用户的专办信息
+            </summary>
+            <param name="workflowName">工作流名称</param>
+            <param name="assignToUserId">用户的登录Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentByToUnit(System.String,System.String)">
+            <summary>
+            按指定专办单位获取指定专办信息
+            </summary>
+            <param name="workflowName">工作流名称</param>
+            <param name="toUnitCode">专办单位的单位代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentByAssignToRole(System.String,System.String,System.Guid,System.String)">
+            <summary>
+            按被指定专办的角色和立项状态获取专办信息
+            </summary>
+            <param name="workflowName">工作流名称</param>
+            <param name="assignToRole">别指定的角色</param>
+            <param name="instanceId">实例Id</param>
+            <param name="assignState">指定状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentByAssignToRole(System.String,OilDigital.Workflows.InstanceCollection)">
+            <summary>
+            按被指定专办的角色和立项状态获取专办信息
+            </summary>
+            <param name="assignToRole">别指定的角色</param>
+            <param name="instances">The instances.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentByAssignState(System.Guid,System.String)">
+            <summary>
+            获取某工作流实例在某状态下的指定专办信息
+            </summary>
+            <param name="instanceId">实例Id</param>
+            <param name="assignState">指定状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignmentById(System.Int32)">
+            <summary>
+            获取专办信息
+            </summary>
+            <param name="id">专办id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignment(System.String,System.Int32)">
+            <summary>
+            Gets the assignment.
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="eaid">The eaid.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignment(System.Guid)">
+            <summary>
+            按实例Id获取指定专办信息
+            </summary>
+            <param name="instanceId">The instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAssignment(System.Guid[])">
+            <summary>
+            按实例id数组获取指定专办信息
+            </summary>
+            <param name="instanceId">The instance id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteAssignmentById(System.Int32)">
+            <summary>
+            删除专办信息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteAssignment(System.Guid)">
+            <summary>
+            按实例Id删除专办信息
+            </summary>
+            <param name="instanceId">The instance id.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAgentDao">
+            <summary>
+            Gets the agent DAO.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.InsertAgent(OilDigital.Workflows.ApprovalAgent)">
+            <summary>
+            插入一条委托代理信息
+            </summary>
+            <param name="agentInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAgentInfoById(System.Int32)">
+            <summary>
+            按Id获取代理信息
+            </summary>
+            <param name="id">代理的Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetValidAgentInfoByToUser(System.String)">
+            <summary>
+            获取有效委托代办信息
+            </summary>
+            <param name="toUserId">被委托人Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAgentInfoByToUser(System.String)">
+            <summary>
+            获取委托代办信息
+            </summary>
+            <param name="toUserId">被委托人Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAgentInfoByFromUser(System.String)">
+            <summary>
+            按委托人Id获取委托代办名单
+            </summary>
+            <param name="setAgentUserId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.UpdateAgentInfo(OilDigital.Workflows.ApprovalAgent)">
+            <summary>
+            保存代理信息
+            </summary>
+            <param name="agentInfo">代理信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.DeleteAgentInfoById(System.Int32)">
+            <summary>
+            按Id删除委托代办信息
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHApprovalService.GetAllAgentInfo">
+            <summary>
+            获取所有授权代办信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.NHWorkflowPersistService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.SaveWorkflowInstance(OilDigital.Workflows.StateMachineWorkflowInstance)">
+            <summary>
+            保存工作流实例
+            </summary>
+            <param name="instance"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.InsertWorkflowInstance(OilDigital.Workflows.StateMachineWorkflowInstance)">
+            <summary>
+            插入一条新的工作流
+            </summary>
+            <param name="instance"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.String[],System.Type)">
+            <summary>
+            获取处于某状态下的所有状态机工作流实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="stateName">状态名称</param>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.String[],System.String,System.String)">
+            <summary>
+            按创建者单位，Id，和实例状态获取实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="stateName">实例状态名称</param>
+            <param name="createUserId">创建者Id</param>
+            <param name="unitCode">创建者单位代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.String[],System.String)">
+            <summary>
+            按实例的状态和实例创建者的单位代码获取实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="stateName">实例状态名称</param>
+            <param name="unitCode">创建该实例的用户单位代码</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.String)">
+            <summary>
+            获取某用户创建的实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="createUserId">创建用户的Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.Int32,System.Boolean)">
+            <summary>
+            获取某立项对应的实例
+            </summary>
+            <param name="workflowName"></param>
+            <param name="eaId">立项Id</param>
+            <param name="isAttachMore">是否需要加载其他信息:该实例所有执行动作的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.DeleteWorkflowInstance(OilDigital.Workflows.WorkflowInstance)">
+            <summary>
+            删除指定工作流
+            </summary>
+            <param name="instance"></param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.ConvertNHToInstance(OilDigital.Workflows.DAO.NHStateMachineInstance,System.Boolean)">
+            <summary>
+            将NHStateMachineInstance对象反序列化为状态机工作流对象
+            </summary>
+            <param name="instance">The instance.</param>
+            <param name="isAttachMore">是否需要加载其他信息:该实例所有执行动作的实例</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.ConvertNHFromInstance(OilDigital.Workflows.StateMachineWorkflowInstance,OilDigital.Workflows.DAO.NHStateMachineInstance)">
+            <summary>
+            将状态机工作流实例序列化转换为NHStateMachineInstance
+            </summary>
+            <param name="instance">The instance.</param>
+            <param name="nHInstance">The n H instance.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.Guid)">
+            <summary>
+            根据Id获取某状态机工作流实例
+            </summary>
+            <param name="id">实例Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.InternalGetWorkflowInstance(System.Guid)">
+            <summary>
+            Internals the get workflow instance.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.Guid,System.Boolean)">
+            <summary>
+            获取某实例
+            </summary>
+            <param name="id">实例Id</param>
+            <param name="isAttachMore">是否装载更多信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.DateTime,System.DateTime,System.String[])">
+            <summary>
+            获取指定最后操作时间段和指定状态下的工作流实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="startDate">起始日期</param>
+            <param name="endDate">终止日期</param>
+            <param name="stateName">实例所处状态</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetWorkflowInstance(System.String,System.DateTime,System.DateTime,System.String[],System.String)">
+            <summary>
+            获取指定最后操作时间段和指定状态下的工作流实例
+            </summary>
+            <param name="workflowName">Name of the workflow.</param>
+            <param name="startDate">起始日期</param>
+            <param name="endDate">终止日期</param>
+            <param name="stateName">实例所处状态</param>
+            <param name="unitCode">单位代码.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.AddApprovalActivity(OilDigital.Workflows.Activity)">
+            <summary>
+            保存活动信息
+            </summary>
+            <param name="approvalActivity">审批活动</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHWorkflowPersistService.GetApprovalActivity(System.Int64)">
+            <summary>
+            由Id获取审批活动实例
+            </summary>
+            <param name="id">审批活动Id</param>
+            <returns></returns>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.NHActivity">
+            <summary>
+            数据库中保存的Activity实体类.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHActivity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:OilDigital.Workflows.DAO.NHActivity"/> class.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHActivity.#ctor(OilDigital.Workflows.Activity)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OilDigital.Workflows.DAO.NHActivity"/> class.
+            </summary>
+            <param name="activity">The activity.</param>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHActivity.CovertTo">
+            <summary>
+            将NHActivity对象反序列化转换为ApprovalActivity对象
+            </summary>
+            <returns>转换的ApprovalActivity对象</returns>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHActivity.ConvertFrom(OilDigital.Workflows.Activity)">
+             <summary>
+            ApprovalActivity对象序列化转换为NHActivity对象
+             </summary>
+             <param name="activity">活动对象</param>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHActivity.Id">
+            <summary>
+            实例Id
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHActivity.TypeName">
+            <summary>
+            活动类型
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHActivity.PersistInfo">
+            <summary>
+            序列化信息
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.Id">
+            <summary>
+            实例Id
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.EaId">
+            <summary>
+            Gets or sets the ea id.
+            </summary>
+            <value>The ea id.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.ParentId">
+            <summary>
+            Gets or sets the parent id.
+            </summary>
+            <value>The parent id.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.Children">
+            <summary>
+            Gets or sets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.WorkflowName">
+            <summary>
+            Gets or sets the name of the workflow.
+            </summary>
+            <value>The name of the workflow.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.TypeName">
+            <summary>
+            实例类型
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.StateName">
+            <summary>
+            实例状态
+            </summary>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.CreaterUnit">
+            <summary>
+            Gets or sets the creater unit.
+            </summary>
+            <value>The creater unit.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.CreaterUserId">
+            <summary>
+            Gets or sets the creater user id.
+            </summary>
+            <value>The creater user id.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.PersistTime">
+            <summary>
+            Gets or sets the persist time.
+            </summary>
+            <value>The persist time.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.ExecuteActivitiesIds">
+            <summary>
+            Gets or sets the execute activities ids.
+            </summary>
+            <value>The execute activities ids.</value>
+        </member>
+        <member name="P:OilDigital.Workflows.DAO.NHStateMachineInstance.StateRecord">
+            <summary>
+            Gets or sets the state record.
+            </summary>
+            <value>The state record.</value>
+        </member>
+        <member name="T:OilDigital.Workflows.DAO.NHTransactionService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHTransactionService.BeginTransaction">
+            <summary>
+            开启一个事务
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHTransactionService.CommitTransaction">
+            <summary>
+            提交事务
+            </summary>
+        </member>
+        <member name="M:OilDigital.Workflows.DAO.NHTransactionService.RollbackTransaction">
+            <summary>
+            滚回事务
+            </summary>
+        </member>
+    </members>
+</doc>

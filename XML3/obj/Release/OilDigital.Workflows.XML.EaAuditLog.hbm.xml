@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.EaAuditLog, OilDigital.Workflows" table="AuditLog">
+		<id name="Id" column="Id">
+			<generator class="assigned"/>
+		</id>
+		<property name="EaId" column="entityId"/>
+		<property name="UserId" column="userid"/>
+		<property name="IP" column="ip"/>
+		<property name="ActionType" column="actiontype"/>
+		<property name="ClassName" column="classname"/>
+		<property name="PropertyName" column="propertyname"/>
+		<property name="OriginalValue" column="originalvalue"/>
+		<property name="CurrentValue" column="currentvalue"/>
+		<property name="UpdateTime" column="updatetime"/>
+		<property name="ThreadId" column="threadid"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,6 @@
+D:\My Proj\WorkFlow\Workflows\bin\Release\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\Workflows\bin\Release\OilDigital.Workflows.pdb
+D:\My Proj\WorkFlow\Workflows\obj\Release\ResolveAssemblyReference.cache
+D:\My Proj\WorkFlow\Workflows\obj\Release\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\Workflows\obj\Release\OilDigital.Workflows.pdb
+D:\My Proj\WorkFlow\Workflows\bin\Release\OilDigital.Workflows.XML

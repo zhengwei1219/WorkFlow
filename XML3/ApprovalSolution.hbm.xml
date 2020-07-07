@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" >
+	<class name="OilDigital.Workflows.ApprovalSolution,OilDigital.Workflows" table="WF_ApprovalSolution">
+		<id name="Id" column="Id">
+			<generator class="identity"/>
+		</id>
+		<property name="EaId" column="EaId"/>
+		<property name="WorkflowInstanceId" column="WorkflowInstanceId"/>
+		<property name="OperatorId" column="SignUserId"/>
+		<property name="OperatorName" column="SignUserName"/>
+		<property name="OperatorUnitCode" column="SignUserUnitCode"/>
+		<property name="OperatorRole" column="SignRole"/>
+		<property name="OperatorTime" column="DateOfSolution"/>
+		<property name="ToUserId" column="SignToUserId"/>
+		<property name="ToUserRole" column="SignToRole"/>
+		<property name="SolutionType" column="SolutionType"/>
+		<property name="SolutionInfo" column="SolutionInfo"/>
+	</class>
+</hibernate-mapping>

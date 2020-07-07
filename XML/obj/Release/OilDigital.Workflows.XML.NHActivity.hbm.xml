@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.DAO.NHActivity, OilDigital.Workflows.DAO" table="WF_ApprovalActivity">
+		<cache usage="read-write"/>
+		<id name="Id" column="id">
+			<generator class="identity"/>
+		</id>
+		<property name="TypeName"  column="TypeName"></property>
+		<property name="PersistInfo"  column="PersistInfo"></property>
+	</class>
+</hibernate-mapping>

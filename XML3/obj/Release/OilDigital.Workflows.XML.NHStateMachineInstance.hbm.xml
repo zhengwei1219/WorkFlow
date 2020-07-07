@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.DAO.NHStateMachineInstance, OilDigital.Workflows.DAO3" table="WF_WorkflowInstance">
+		<id name="Id" column="id">
+			<generator class="assigned"/>
+		</id>
+		<property name="EaId"  column="EaId"></property>
+		<property name="ParentId"  column="ParentId"></property>
+		<property name="Children"  column="Children"></property>
+		<property name="WorkflowName"  column="WorkflowName"></property>
+		<property name="TypeName"  column="TypeName"></property>
+		<property name="StateName"  column="StateName"></property>
+		<property name="CreaterUnit"  column="CreaterUnit"></property>
+		<property name="CreaterUserId"  column="CreaterUserId"></property>
+		<property name="PersistTime"  column="PersistTime"></property>
+		<property name="StateRecord"  column="StateRecord"></property>
+		<property name="ExecuteActivitiesIds"  column="ExecuteActivitiesIds"></property>
+	</class>
+</hibernate-mapping>

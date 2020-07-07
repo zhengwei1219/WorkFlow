@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OilDigital.Common.NhDAL.Core</name>
+    </assembly>
+    <members>
+        <member name="M:OilDigital.Common.NHDAL.Core.IGenericDao`2.CommitChanges">
+            <summary>
+            Commits all of the changes thus far to the storage system
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetById(`1,System.Boolean)">
+            <summary>
+            Loads an instance of type T from the DB based on its ID.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetAll">
+            <summary>
+            Loads every instance of the requested type with no filtering.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetByCriteria(NHibernate.Expression.ICriterion[])">
+            <summary>
+            Loads every instance of the requested type using the supplied <see cref="T:NHibernate.Expression.ICriterion"/>.
+            If no <see cref="T:NHibernate.Expression.ICriterion"/> is supplied, this behaves like <see cref="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetAll"/>.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetUniqueByExample(`0,System.String[])">
+            <summary>
+            Looks for a single instance using the example provided.
+            </summary>
+            <exception cref="T:NHibernate.NonUniqueResultException"/>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.Save(`0)">
+            <summary>
+            For entities that have assigned ID's, you must explicitly call Save to add a new one.
+            See http://www.hibernate.org/hib_docs/reference/en/html/mapping.html#mapping-declaration-id-assigned.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.SaveOrUpdate(`0)">
+            <summary>
+            For entities with automatatically generated IDs, such as identity, SaveOrUpdate may 
+            be called when saving a new entity.  SaveOrUpdate can also be called to update any 
+            entity, even if its ID is assigned.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.ConvertToGenericList(System.Collections.IList)">
+            <summary>
+            Accepts a list of objects and converts them to a strongly typed list.
+            </summary>
+            <remarks>This should be put into a utility class as it's not directly
+            related to data access.</remarks>
+        </member>
+        <member name="P:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.session">
+            <summary>
+            Exposes the ISession used within the DAO.
+            </summary>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog">
+            <summary>
+            记录数据修改日志
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog"/> class.
+            </summary>
+            <param name="logAllPropertyWhenDeleting">if set to <c>true</c> 在删除对象的时候是否需要记录所有的属性.</param>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog"/> class
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.FindDirty(System.Object,System.Object,System.Object[],System.Object[],System.String[],NHibernate.Type.IType[])">
+            <summary>
+            Called from <c>Flush()</c>. The return value determines whether the entity is updated
+            </summary>
+            <param name="entity">A persistent entity</param>
+            <param name="id"></param>
+            <param name="currentState"></param>
+            <param name="previousState"></param>
+            <param name="propertyNames"></param>
+            <param name="types"></param>
+            <returns>
+            An array of dirty property indicies or <c>null</c> to choose default behavior
+            </returns>
+            <remarks>
+            	<list>
+            		<item>an array of property indicies - the entity is dirty</item>
+            		<item>an empty array - the entity is not dirty</item>
+            		<item><c>null</c> - use Hibernate's default dirty-checking algorithm</item>
+            	</list>
+            </remarks>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.OnDelete(System.Object,System.Object,System.Object[],System.String[],NHibernate.Type.IType[])">
+            <summary>
+            Called before an object is deleted
+            </summary>
+            <param name="entity"></param>
+            <param name="id"></param>
+            <param name="state"></param>
+            <param name="propertyNames"></param>
+            <param name="types"></param>
+            <remarks>
+            It is not recommended that the interceptor modify the <c>state</c>.
+            </remarks>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.OnFlushDirty(System.Object,System.Object,System.Object[],System.Object[],System.String[],NHibernate.Type.IType[])">
+            <summary>
+            Called when an object is detected to be dirty, during a flush.
+            </summary>
+            <param name="entity"></param>
+            <param name="id"></param>
+            <param name="currentState"></param>
+            <param name="previousState"></param>
+            <param name="propertyNames"></param>
+            <param name="types"></param>
+            <returns>
+            	<c>true</c> if the user modified the <c>currentState</c> in any way
+            </returns>
+            <remarks>
+            The interceptor may modify the detected <c>currentState</c>, which will be propagated to
+            both the database and the persistent object. Note that all flushes end in an actual
+            synchronization with the database, in which as the new <c>currentState</c> will be propagated
+            to the object, but not necessarily (immediately) to the database. It is strongly recommended
+            that the interceptor <b>not</b> modify the <c>previousState</c>.
+            </remarks>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.GetAuditProperties(System.Reflection.PropertyInfo[],OilDigital.Common.Log.AuditLogAttribute[]@)">
+            <summary>
+            Gets the audit properties.
+            </summary>
+            <param name="properties">The properties.</param>
+            <param name="attributes">The attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.OnLoad(System.Object,System.Object,System.Object[],System.String[],NHibernate.Type.IType[])">
+            <summary>
+            Called just before an object is initialized
+            </summary>
+            <param name="entity"></param>
+            <param name="id"></param>
+            <param name="state"></param>
+            <param name="propertyNames"></param>
+            <param name="types"></param>
+            <returns>
+            	<c>true</c> if the user modified the <c>state</c> in any way
+            </returns>
+            <remarks>
+            The interceptor may change the <c>state</c>, which will be propagated to the persistent
+            object. Note that when this method is called, <c>entity</c> will be an empty
+            uninitialized instance of the class.</remarks>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.InterceptorWithAuditLog.OnSave(System.Object,System.Object,System.Object[],System.String[],NHibernate.Type.IType[])">
+            <summary>
+            Called before a new object is saved
+            </summary>
+            <param name="entity"></param>
+            <param name="id"></param>
+            <param name="state"></param>
+            <param name="propertyNames"></param>
+            <param name="types"></param>
+            <returns>
+            	<c>true</c> if the user modified the <c>state</c> in any way
+            </returns>
+            <remarks>
+            The interceptor may modify the <c>state</c>, which will be used for the SQL <c>INSERT</c>
+            and propagated to the persistent object
+            </remarks>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.NHibernateSessionManager">
+            <summary>
+            Handles creation and management of sessions and transactions.  It is a singleton because 
+            building the initial session factory is very expensive. Inspiration for this class came 
+            from Chapter 8 of Hibernate in Action by Bauer and King.  Although it is a sealed singleton
+            you can use TypeMock (http://www.typemock.com) for more flexible testing.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.#ctor">
+            <summary>
+            Initializes the NHibernate session factory upon instantiation.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.RegisterInterceptor(NHibernate.IInterceptor)">
+            <summary>
+            Allows you to register an interceptor on a new session.  This may not be called if there is already
+            an open session attached to the HttpContext.  If you have an interceptor to be used, modify
+            the HttpModule to call this before calling BeginTransaction().
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.GetSession(NHibernate.IInterceptor)">
+            <summary>
+            Gets a session with or without an interceptor.  This method is not called directly; instead,
+            it gets invoked from other public methods.
+            </summary>
+        </member>
+        <member name="P:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.Instance">
+            <summary>
+            This is a thread-safe, lazy singleton.  See http://www.yoda.arachsys.com/csharp/singleton.html
+            for more details about its implementation.
+            </summary>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.Nested">
+            <summary>
+            Assists with ensuring thread-safe, lazy singleton
+            </summary>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider">
+            <summary>
+            基于直接sql的操作的数据审核日志提供者,在插入日志的时候使用Nhibernate中的事务和连接对象
+            </summary>
+        </member>
+        <member name="F:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.enabled">
+            <summary>
+            是否enabled
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.Log(OilDigital.Common.Log.IWebAuditLog)">
+            <summary>
+            save log object,使用配置的数据库链接字符串来执行.
+            </summary>
+            <param name="log"><see cref="T:OilDigital.Common.Log.IWebAuditLog"/> instance </param>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.Initialize(System.String,System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            从配置文件初始化
+            </summary>
+            <param name="name"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.ExtractConfigValue(System.Collections.Specialized.NameValueCollection,System.String,System.String)">
+            <summary>
+            A helper function to retrieve config values from the configuration file and remove the entry.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.GetLogsByEntityId(System.String,System.String)">
+            <summary>
+            获取某个类名下面的实体的所有相关修改记录
+            </summary>
+            <param name="className">Name of the class.</param>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.SQLAuditLogProvider.GetLogsByParentId(System.String,System.String)">
+            <summary>
+            Gets the logs by parent id.
+            </summary>
+            <param name="className">Name of the class.</param>
+            <param name="parentId">The parent id.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

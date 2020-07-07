@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OilDigital.Common.NhDAL.Core</name>
+    </assembly>
+    <members>
+        <member name="M:OilDigital.Common.NHDAL.Core.IGenericDao`2.CommitChanges">
+            <summary>
+            Commits all of the changes thus far to the storage system
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetById(`1,System.Boolean)">
+            <summary>
+            Loads an instance of type T from the DB based on its ID.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetAll">
+            <summary>
+            Loads every instance of the requested type with no filtering.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetByCriteria(NHibernate.Expression.ICriterion[])">
+            <summary>
+            Loads every instance of the requested type using the supplied <see cref="T:NHibernate.Expression.ICriterion"/>.
+            If no <see cref="T:NHibernate.Expression.ICriterion"/> is supplied, this behaves like <see cref="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetAll"/>.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.GetUniqueByExample(`0,System.String[])">
+            <summary>
+            Looks for a single instance using the example provided.
+            </summary>
+            <exception cref="T:NHibernate.NonUniqueResultException"/>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.Save(`0)">
+            <summary>
+            For entities that have assigned ID's, you must explicitly call Save to add a new one.
+            See http://www.hibernate.org/hib_docs/reference/en/html/mapping.html#mapping-declaration-id-assigned.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.SaveOrUpdate(`0)">
+            <summary>
+            For entities with automatatically generated IDs, such as identity, SaveOrUpdate may 
+            be called when saving a new entity.  SaveOrUpdate can also be called to update any 
+            entity, even if its ID is assigned.
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.ConvertToGenericList(System.Collections.IList)">
+            <summary>
+            Accepts a list of objects and converts them to a strongly typed list.
+            </summary>
+            <remarks>This should be put into a utility class as it's not directly
+            related to data access.</remarks>
+        </member>
+        <member name="P:OilDigital.Common.NHDAL.Core.GenericNHibernateDao`2.session">
+            <summary>
+            Exposes the ISession used within the DAO.
+            </summary>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.NHibernateSessionManager">
+            <summary>
+            Handles creation and management of sessions and transactions.  It is a singleton because 
+            building the initial session factory is very expensive. Inspiration for this class came 
+            from Chapter 8 of Hibernate in Action by Bauer and King.  Although it is a sealed singleton
+            you can use TypeMock (http://www.typemock.com) for more flexible testing.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.#ctor">
+            <summary>
+            Initializes the NHibernate session factory upon instantiation.
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.RegisterInterceptor(NHibernate.IInterceptor)">
+            <summary>
+            Allows you to register an interceptor on a new session.  This may not be called if there is already
+            an open session attached to the HttpContext.  If you have an interceptor to be used, modify
+            the HttpModule to call this before calling BeginTransaction().
+            </summary>
+        </member>
+        <member name="M:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.GetSession(NHibernate.IInterceptor)">
+            <summary>
+            Gets a session with or without an interceptor.  This method is not called directly; instead,
+            it gets invoked from other public methods.
+            </summary>
+        </member>
+        <member name="P:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.Instance">
+            <summary>
+            This is a thread-safe, lazy singleton.  See http://www.yoda.arachsys.com/csharp/singleton.html
+            for more details about its implementation.
+            </summary>
+        </member>
+        <member name="T:OilDigital.Common.NHDAL.Core.NHibernateSessionManager.Nested">
+            <summary>
+            Assists with ensuring thread-safe, lazy singleton
+            </summary>
+        </member>
+    </members>
+</doc>

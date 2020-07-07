@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.ApprovalRecord, OilDigital.Workflows" table="WF_ApprovalRecord">
+		<cache usage="read-write"/>
+		<id name="Id" column="Id">
+			<generator class="identity"/>
+		</id>
+		<property name="WorkflowInstanceId" column="WorkflowInstanceId"/>
+		<property name="EaId" column="EaId"/>
+		<property name="OperatorId" column="ApprovalUserId"/>
+		<property name="OperatorName" column="ApprovalUserName"/>
+		<property name="OperatorUnitCode" column="ApprovalUserUnitCode"/>
+		<property name="OperatorRole" column="ApprovalUserRole"/>
+		<property name="OperatorTime" column="ApprovalTime"/>
+		<property name="ApprovalType" column="ApprovalType"/>
+		<property name="StateName" column="StateName"/>
+		<property name="SolutionInfo" column="SolutionInfo"/>
+		<property name="IsCanceled" />
+	</class>
+</hibernate-mapping>

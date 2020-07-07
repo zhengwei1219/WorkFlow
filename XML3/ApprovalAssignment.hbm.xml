@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2">
+	<class name="OilDigital.Workflows.ApprovalAssignment, OilDigital.Workflows" table="WF_ApprovalAssignment">
+		<id name="Id" column="Id">
+			<generator class="identity"/>
+		</id>
+		<property name="WorkflowInstanceId" column="WorkflowInstanceId"/>
+		<property name="EaId" column="EaId"/>
+		<property name="FromRole" column="FromRole"/>
+		<property name="FromUserId" column="FromUserId"/>
+		<property name="ToRole" column="ToRole"/>
+		<property name="ToUserId" column="ToUserId"/>
+		<property name="ToUnitCode" column="ToUnitCode"/>
+		<property name="AssignState" column="AssignState"/>
+		<property name="AssignDate" column="AssignDate"/>
+	</class>
+</hibernate-mapping>

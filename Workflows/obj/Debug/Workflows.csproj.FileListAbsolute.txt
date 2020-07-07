@@ -1,0 +1,18 @@
+D:\My Proj\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.XML
+D:\My Proj\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.pdb
+D:\My Proj\WorkFlow\Workflows\obj\Debug\ResolveAssemblyReference.cache
+D:\My Proj\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.dll
+D:\My Proj\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.pdb
+F:\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.XML
+F:\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.dll
+F:\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.pdb
+F:\WorkFlow\Workflows\obj\Debug\Workflows.csprojResolveAssemblyReference.cache
+F:\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.dll
+F:\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.pdb
+G:\zhengwei\Project\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.XML
+G:\zhengwei\Project\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.dll
+G:\zhengwei\Project\WorkFlow\Workflows\bin\Debug\OilDigital.Workflows.pdb
+G:\zhengwei\Project\WorkFlow\Workflows\obj\Debug\Workflows.csprojResolveAssemblyReference.cache
+G:\zhengwei\Project\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.dll
+G:\zhengwei\Project\WorkFlow\Workflows\obj\Debug\OilDigital.Workflows.pdb
